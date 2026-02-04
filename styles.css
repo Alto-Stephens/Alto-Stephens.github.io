@@ -1,6 +1,11 @@
 p{
-    tet-aligh: center; color:red;
+    text-align: center; color:red;
 }
-#para1{
-    text-alighn: center; color:blue;
+#header{
+    text-align: center; color:blue;
 }
+.About{
+    text-align:center; color:green;
+}
+
+
