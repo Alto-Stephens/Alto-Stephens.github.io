@@ -1,11 +1,15 @@
+body{
+    background-color:"background-color: rgb(255, 251, 214)";
+    font-family:'Courier New', Courier, monospace;
+}
 p{
-    text-align: center; color:red;
+    text-align:center; color:blue;
 }
 #header{
-    text-align: center; color:blue;
+    text-align:center; color:red;
 }
 .About{
-    text-align:center; color:green;
+    text-align:center; color:greenyellow;
 }
 
 
