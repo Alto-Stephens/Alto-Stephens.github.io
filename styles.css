@@ -1,6 +1,5 @@
 body{
-    background-color:"background-color: rgb(255, 251, 214)";
-    font-family:'Courier New', Courier, monospace;
+    background-color:rgb(255, 251, 214);
 }
 p{
     text-align:center; color:blue;
@@ -10,6 +9,12 @@ p{
 }
 .About{
     text-align:center; color:greenyellow;
+}
+.left{
+    text-align:lext;
+}
+.green{
+    font-weight:bold;
 }
 
 
