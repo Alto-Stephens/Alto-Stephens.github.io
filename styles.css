@@ -1,5 +1,5 @@
 body{
-    background-color:#EDDCC6;
+    background-color:#FFF4EA;
 }
 p{
     text-align:center; color:blue;
@@ -13,11 +13,11 @@ p{
 .center{
     text-align:center;
 }
-.green{
-    font-weight:bold;
-}
 .Projects{
-    background-color:#FFF4EA;
+    background-color:#EDDCC6;
+}
+.ul{
+    display:inline-block;
 }
 
 
