@@ -1,14 +1,14 @@
 body{
-    background-color:rgb(255, 251, 214);
+    background-color:#EDDCC6;
 }
 p{
     text-align:center; color:blue;
 }
 #header{
-    text-align:center; color:red;
+    text-align:center; color: #BF4646;
 }
 .About{
-    text-align:center; color:greenyellow;
+    text-align:center; color: #7EACB5;
 }
 .center{
     text-align:center;
@@ -17,7 +17,7 @@ p{
     font-weight:bold;
 }
 .Projects{
-    background-color:#B6174B;
+    background-color:#FFF4EA;
 }
 
 
