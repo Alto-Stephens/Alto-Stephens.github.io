@@ -20,13 +20,13 @@ p{
     display:inline-block;
     text-align: center;
 }
-.button {
-    padding: 1px 6px;
-    border: 1px outset buttonborder;
+a.button {
+    padding: 6px;
+    border: 1px outset blueviolet;
     border-radius: 3px;
-    color: buttontext;
-    background-color: buttonface;
-    text-decoration: none;
+    color: black;
+    background-color: blue;
+    text-decoration:dotted;
 }
 
 
