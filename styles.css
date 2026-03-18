@@ -22,10 +22,10 @@ p{
 }
 a.button {
     padding: 6px;
-    border: 1px outset blueviolet;
+    border: 8px outset blue;
     border-radius: 3px;
     color: black;
-    background-color: blue;
+    background-color: red;
     text-decoration:dotted;
 }
 
