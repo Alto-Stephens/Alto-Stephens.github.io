@@ -1,0 +1,28 @@
+/* Structural elements */
+body{
+    font-family: trebuchet ms, sans-serif;
+    background:url(images/orangeplaid.jpg)
+}
+#content {
+    background-color:rgba(255, 228, 196, 1);
+    filter: drop-shadow(5px 5px 12px rgba(253, 196, 183, 0.8));
+    width: 90%;
+    padding: 8%;
+    margin: auto; /* centers in the page */
+    border-radius: 5px;
+    border: 3px dashed black;
+}
+
+header{
+    padding: 5px;
+    border: 10px inset rgb(227, 111, 10);
+}
+
+
+/* Navigation */
+
+
+/* Typography */
+h1{
+    color:brown;
+}

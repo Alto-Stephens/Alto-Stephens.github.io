@@ -1,0 +1,32 @@
+/* Structural elements */
+body{
+    font-family: "Comic Relief", cursive;
+    background-color:blanchedalmond;
+}
+div{
+    width: 90%;
+    padding: 8%;
+    margin: auto; /* centers in the page */
+    border-radius: 5px;
+    border: 3px dashed black;
+}
+/* Navigational elements */
+a{
+    text-decoration:none;
+    color:darkred;
+}
+/* Typography */
+h1{
+    color:brown;
+}
+h2{
+    color:rgb(76, 1, 1);
+}
+#description{
+    color:sienna;
+}
+#copyright{
+    color:rgb(76, 1, 1);
+    border-top: 1px solid rgb(0, 0, 0);
+    font-size:small;
+}

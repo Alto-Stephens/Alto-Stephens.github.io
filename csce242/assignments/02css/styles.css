@@ -1,0 +1,59 @@
+/*Structural elements*/
+body{
+    font-family: Candara, sans-serif;
+    background-color:#000000ca;
+    background-image: url(images/pawprint.jpg);
+    background-size: 400px 300px;
+    background-repeat: repeat;
+    background-blend-mode: multiply;
+}
+div{
+     border: 3px solid #FFFBBD;
+     border-radius: 12 px;
+     padding: 20px;
+     margin: 25px auto;
+     max-width: 700px;
+     box-shadow: 2px 2px 20px white;
+}
+table {
+    border-collapse: collapse;
+    background-color: #FFFBBD;
+}
+img{
+    border: 3px dashed #7FB069;
+    padding: 2px;
+    margin: 5px;
+}
+
+th,
+td {
+    border: 2px solid black;
+    padding: 10px;
+}
+/*Navigational elements*/
+
+/*Typography*/
+#p1{
+    color:#A0CCDA;
+    padding: 10px;
+    margin-right: auto;
+    border-left: 2px solid #FFFBBD;
+    
+}
+#p2{
+    background-color: lightblue;
+}
+h1{
+    color:#7FB069;
+}
+h2{
+    color:#FFFBBD;
+}
+#p2head{
+    color:azure;
+}
+#copyright{
+    color:#FFFBBD;
+    border-top: 1px solid #FFFBBD;
+    font-size:small;
+}
