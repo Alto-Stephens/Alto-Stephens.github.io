@@ -7,8 +7,20 @@ body{
     width: 800px;
     margin: auto;
 }
+#sidebar{
+    background-color:white;
+}
+#info{
+    
+    background-color: brown;
+}
+#sidebar,#info{
+    padding:2%;
+}
 /* Navigation */
-
+#quick-links{
+    list-style-type:none;
+}
 /* Typography */
 
 /* Responsive Design */
