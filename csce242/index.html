@@ -10,20 +10,55 @@
         <title> CSCE 242 Portfolio Page</title>
     </head>
     <body>
-        <div>
-                <header>
-                    <h1> CSCE 242 Portfolio Page</h1>
-                    <h2> Alto Stephens </h2>
+        <div class="page-shell">
+                <header class="site-header">
+                    <h1>CSCE 242 Portfolio Page</h1>
+                    <h2 class="student">Alto Stephens</h2>
                 </header>
                 <main>
-                    <p id="description">Csce 242 utilizes html and css to create and design a web site.</p>
-                    <ul>
-
-                        <li><a href="assignments/01html/index.html">Assignment 1</a></li>
-                        <li><a href="assignments/02css/index.html">Assignment 2</a></li>
-                        <li><a href="assignments/03flex/index.html">Assignment 3</a></li>
-                    </ul>
+                    <p id="course-note">Csce 242 utilizes html and css to create and design a web site.</p>
                 </main>
+                <section class="portfolio-section">
+                    <h2 id="assignments-title" class="section-heading">Assignments</h2>
+                    
+                    <div class="card-grid">
+                        <article class="portfolio-card">
+                            <h3>Assignment 1 - Basic HTML</h3>
+                            <img src="../images/01htmlthumbnail.png" alt="thumbnail of 01html project">
+
+                            <p>A webpage about tardigrades using headings, paragraphs, lists, tables, links, and images.</p>
+                            <a class="card-link" href="assignments/01html/index.html">View assignment</a>
+                        
+                        </article>
+
+                        <article class="portfolio-card">
+                            <h3>Assignment 2 - Basic CSS</h3>
+                            <img src="../images/02cssthumbnail.png" alt="thumbnail of 02css project">
+
+                            <p>A cat-themed website styled with CSS, including custom colors, backgrounds, typography, tables, layouts, and images.</p>
+                            <a class="card-link" href="assignments/02css/index.html">View assignment</a>
+                        </article>
+
+                        <article class="portfolio-card">
+                            <h3>Assignment 3 - Flexbox Layout</h3>
+                            <img src="../images/03flexthumbail.png" alt="thumbnail of 03flex project">
+
+                            <p>A responsive page layout created with CSS and HTML using Flexbox for desktop and mobile screens.</p>
+                            <a class="card-link" href="assignments/03flex/index.html">View assignment</a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="portfolio-section">
+                    <h2 id="projects-title" class="section-heading">Projects</h2>
+                    <div class="card-grid">
+                        <article class="portfolio-card">
+                            <h3>Project proposal</h3>
+                            <img src="../images/proposal1.png" alt="image of project proposal">
+                        </article>
+                            
+                    </div>
+                </section>
                 <footer>
                     <p id="copyright">&copy; altostephens</p>
                 </footer>
