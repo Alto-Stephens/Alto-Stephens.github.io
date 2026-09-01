@@ -144,5 +144,6 @@ h2{
         height:150px;
         margin-right:auto;
         margin-left:auto;
+        max-width:100%;
     }
 }
