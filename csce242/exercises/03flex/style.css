@@ -9,18 +9,33 @@ body{
 }
 #sidebar{
     background-color:white;
+    display:flex;
+    max-height: 150px;
+    margin-right:5px;
 }
 #info{
     
     background-color: brown;
 }
-#sidebar,#info{
+#sidebar,#info,#info2{
     padding:2%;
+    
+}
+#info2{
+    background-color:palevioletred;
+    position:relative;
+    top:-300px;
+    right:280px;
+    max-width:240px
 }
 /* Navigation */
 #quick-links{
     list-style-type:none;
+    position:relative;
+    top:50px;
+    right:170px;
 }
+
 /* Typography */
 
 /* Responsive Design */
@@ -46,4 +61,5 @@ body{
     .six{
         flex:6;
     }
+
 }

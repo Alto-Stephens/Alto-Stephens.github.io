@@ -2,6 +2,7 @@
 *{
     box-sizing:border-box;
 }
+/*Top of the page*/
 body{
     font-family: "Comic Relief", cursive;
     background-color:blanchedalmond;
@@ -30,6 +31,7 @@ body{
     font-size: 1rem;
 }
 
+/*Main part of page*/
 main{
     padding:0 28px 34px;
 }
@@ -47,6 +49,7 @@ main{
     gap:28px;
     align-items:stretch;
 }
+/*Portfolio*/
 .portfolio-card{
     display: flex;
     flex: 1;
@@ -75,6 +78,7 @@ main{
     font-size:.98rem;
     line-height:1.4;
 }
+
 .card-link{
     display:inline-flex;
     align-items:center;
@@ -93,12 +97,14 @@ a{
     color:darkred;
 }
 /* Typography */
+/*Header*/
 h1{
     color:#4f0606;
 }
 h2{
     color:#7a3e24;
 }
+
 #description{
     color:sienna;
 }
@@ -112,7 +118,7 @@ h2{
     .page-shell{
         width:100%;
     }
-
+    /*Site header*/
     .site-header{
         padding:16px 20px 20px;
     }
@@ -125,7 +131,7 @@ h2{
     main{
         padding:0 20px 24px;
     }
-
+    /*Portfolio*/
     .portfolio-section{
         margin:10px 20px 0;
     }
