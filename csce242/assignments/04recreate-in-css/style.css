@@ -144,6 +144,42 @@ nav{
     margin:0 16px;
     line-height:1.8;
 }
+.hero,
+.quote-section,
+.story-right,
+.resource-card,
+.connect{
+    position:relative;
+    cursor:pointer;
+}
+.hero::after,
+.quote-section::after,
+.story-right::after,
+.resource-card::after,
+.connect::after{
+    position:absolute;
+    z-index:4;
+    inset:0;
+    background:rgba(17, 24, 28, 0.1);
+    content:"";
+    opacity:0;
+    pointer-events:none;
+}
+.hero:hover::after,
+.quote-section:hover::after,
+.story-right:hover::after,
+.resource-card:hover::after,
+.connect:hover::after{
+    opacity:1;
+}
+.hero > *,
+.quote-section > *,
+.story-right > *,
+.resource-card > *,
+.connect > *{
+    position:relative;
+    z-index:3;
+}
 @media(max-width:700px){
     .resource-cards{
         flex-direction:column;
@@ -504,4 +540,9 @@ nav.main-nav a::after{
     border-right:2px solid white;
     border-bottom:2px solid white;
     transform:translateY(-2px) rotate(45deg);
+}
+nav.main-nav a:hover,
+#programs-button:hover{
+    background:rgba(17, 24, 28, 0.2);
+    color:white;
 }
