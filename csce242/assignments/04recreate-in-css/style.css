@@ -15,6 +15,8 @@ img{
 a{
     color:inherit;
     text-decoration:none;
+    margin:5px;
+    
 }
 /*limit max width and center page*/
 .page-shell{
@@ -26,6 +28,7 @@ a{
 .brand-bar{
     display:flex;
     align-items:center;
+    background-color:black;
     gap:20px;
     padding:18px 28px 12px;
     border-bottom:1px solid rgba(255,255,255,0.15);
@@ -38,6 +41,7 @@ a{
     height:68px;
 }
 .usc-mark{
+    color:white;
     font-size:1.5rem;
     font-weight:bold;
     letter-spacing:.06rem;
@@ -45,15 +49,24 @@ a{
     top:10px;
     left:50px
 }
+#logo{
+    height:50px;
+    position:absolute;
+    left:20px;
+    border:1px solid white;
+    
+}
 /*brand classes*/
 .brand-text{
     display:flex;
     flex-direction:column;
     gap:4px;
+    color:white;
 }
 .brand-kicker{
     font-size:0.72rem;
     letter-spacing:0.12rem;
+    color:white;
     position:absolute;
     top:15px;
     left:80px;
@@ -65,6 +78,7 @@ a{
     line-height:1.1;
     position:absolute;
     right:50px;
+    color:white;
 }
 .main-nav{
     display:flex;
@@ -72,18 +86,15 @@ a{
     gap:0;
     padding:0 28px 18px;
 }
-.main-nav a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-height:54px;
-    padding:0 18px;
-    border-right:1px solid rgba(255,255,255,0.12);
-    background-color:rgba(255,255,255,0.02);
-    font-size:0.86rem;
-    font-weight:bold;
-    letter-spacing:0.04em;
+nav{
+    background-color:#75000a;
+    color:white;
     text-transform:uppercase;
+    text-align:right;
+    font-size:.75rem;
+    word-spacing:.6rem;
+    padding:10px;
+    font-weight:bold;
 }
 /*hero section*/
 .hero{
@@ -94,51 +105,241 @@ a{
 }
 .hero img{
     width:100%
-    height:500px;
-    object-fit:cover;
 }
 .hero-overlay{
     position:absolute;
     bottom:42px;
     left:56px;
     max-width:620px;
-    padding:32px 30px 26px;
+    padding:0px 30px 26px;
+    background-color:#75000a;
+    color:white;
 }
-.eyebrow,.label{
-    margin:0 0 12px;
-    font-size:0.8rem;
-    font-weight:bold;
-    letter-spacing:0.16em;
-    text-transform:uppercase;
+.feature-strip{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:32px;
+    width:min(1140px,calc(100% - 56px));
+    margin:0 auto;
+    padding:48px 0;
 }
-.hero-overlay h1{
-    margin: 0 0 14px;
-    font-size:clamp(2.3rem, 4vw, 4rem);
-}
-.hero.copy{
+.feature-card{
     margin:0;
-    color:rgba(255,255,255,0.9);
-    font-size 1.05rem;
-    line-height:1.7;
+    padding:0 24px;
+    border-right:1px solid #d4cec3;
 }
-.hero-actions{
-    display:flex;
-    flex-wrap:wrap;
-    gap:14px;
-    margin-top:22px;
+.feature-card:first-child{
+    padding-left:24px;
+}
+.feature-card:last-child{
+    border-right:0;
+}
+.feature-card h2{
+    margin-top:0;
+}
+.feature-card p{
+    line-height:1.6;
+}
+.feature-card a{
+    display:inline-block;
+    margin:0;
+    padding:10px 16px;
+    background:#75000a;
+    color:white;
+    font-weight:bold;
+}
+#programs-button{
+    background-color:black;
+    padding:10px;
+    border:solid 2px white;
+}
 
+:root{
+    --garnet:#73000a;
+    --black:#050505;
+    --paper:#f7f7f7;
+    --gold:#f5bd42;
 }
-.primary-btn,
-.secondary-btn,
-.feature-card a,
-.text-link,
-.connect-buttons a {
-    display:inline-flex;
+body{
+    background:var(--paper);
+    font-family:Arial,Helvetica,sans-serif;
+    color:#111;
+}
+.page-shell{
+    width:100%;
+}
+.brand-bar{
+    position:relative;
+    display:flex;
     align-items:center;
-    justify-content:center;
-    min-height:46px;
-    padding:0 20px;
+    min-height:99px;
+    padding:24px max(28px,calc((100% - 1140px)/2));
+    background:var(--black);
 }
-.secondary-btn{
-    border:1px solid rgba(255,255,255,0.45);
+
+/* Restore the original banner elements and arrange them like the reference. */
+.top-header::before{
+    content:"CALENDAR   |   MAP   |   DIRECTORY   |   APPLY   |   GIVE   |   GATEWAYS »";
+    display:block;
+    height:25px;
+    padding-left:max(28px,calc((100% - 1140px)/2));
+    color:white;
+    background:var(--black);
+    font-size:.58rem;
+    font-weight:bold;
+    line-height:25px;
+}
+.brand-bar{
+    justify-content:flex-start;
+    min-height:74px;
+    padding-top:8px;
+    padding-bottom:13px;
+}
+.brand-bar #logo{
+    order:1;
+    width:43px;
+    height:43px;
+}
+.brand-bar .logo-block{
+    display:block;
+    order:2;
+    width:auto;
+    height:auto;
+}
+.brand-bar .usc-mark{
+    position:static;
+    margin-left:8px;
+    font-family:Georgia,serif;
+    font-size:1.45rem;
+    font-weight:normal;
+    letter-spacing:0;
+}
+.brand-bar .brand-text{
+    order:3;
+    margin-left:auto;
+}
+.brand-bar .brand-kicker{
+    position:absolute;
+    top:19px;
+    left:max(78px,calc((100% - 1140px)/2 + 52px));
+    font-size:.62rem;
+    letter-spacing:.08em;
+}
+.brand-bar .brand-name{
+    position:static;
+    font-family:Georgia,serif;
+    font-size:1.7rem;
+    font-weight:bold;
+}
+nav.main-nav{
+    justify-content:center;
+    gap:12px;
+    min-height:42px;
+    padding-top:0;
+    padding-bottom:0;
+}
+nav.main-nav a{
+    padding:10px 16px;
+}
+.brand-bar .brand-text{
+    order:2;
+    margin-left:10px;
+    gap:0;
+}
+.brand-bar .brand-kicker{
+    position:static;
+}
+.brand-bar .usc-mark{
+    display:block;
+    margin-left:0;
+    font-size:1.45rem;
+    line-height:1;
+}
+.brand-bar > .brand-name{
+    order:3;
+    margin-left:auto;
+}
+@media(max-width:700px){
+    .top-header::before{
+        padding-left:20px;
+        overflow:hidden;
+        white-space:nowrap;
+        font-size:.48rem;
+    }
+    .brand-bar .usc-mark{font-size:1rem;}
+    .brand-bar .brand-kicker{left:72px;font-size:.5rem;}
+    .brand-bar .brand-name{font-size:1.05rem;}
+    nav.main-nav{display:none;}
+}
+    @media(max-width:700px){
+        .feature-strip{
+            grid-template-columns:1fr;
+            width:calc(100% - 32px);
+            gap:0;
+            padding:24px 0;
+        }
+        .feature-card,
+        .feature-card:first-child{
+            padding:24px 0;
+            border-right:0;
+            border-bottom:1px solid #d4cec3;
+        }
+        .feature-card:last-child{
+            border-bottom:0;
+        }
+    }
+.brand-bar .logo-block{
+    display:none;
+}
+.brand-bar #logo{
+    position:static;width:43px;height:43px;object-fit:cover;border:0;
+}
+ .brand-text{gap:0;}
+ .brand-kicker,.brand-name{position:static;}
+ .brand-kicker{font-size:.65rem;letter-spacing:.08em;}
+ .brand-name{font-family:Georgia,serif;font-size:1.35rem;}
+.brand-bar .brand-text{
+    display:flex;
+    flex-direction:column;
+    gap:0;
+    margin-left:10px;
+}
+.brand-bar .brand-kicker,
+.brand-bar .usc-mark{
+    position:static;
+    left:auto;
+    top:auto;
+    margin:0;
+    color:white;
+}
+.brand-bar .brand-kicker{
+    font-size:.62rem;
+    letter-spacing:.08em;
+}
+.brand-bar .usc-mark{
+    font-family:Georgia,serif;
+    font-size:1.45rem;
+    font-weight:normal;
+    line-height:1;
+}
+.brand-bar > .brand-name{
+    position:static;
+    right:auto;
+    margin-left:auto;
+    color:white;
+    font-family:Georgia,serif;
+    font-size:1.7rem;
+}
+.main-nav{
+    justify-content:flex-end;
+    align-items:center;
+    padding:0 max(28px,calc((100% - 1140px)/2));
+    background:var(--garnet);
+}
+nav.main-nav a{
+    display:block;
+    margin:0;
+    padding:11px 15px;
+    font-size:.7rem;
+    letter-spacing:.03em;
 }
