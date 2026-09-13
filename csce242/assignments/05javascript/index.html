@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Assignment 5 | Introduction to JavaScript</title>
+		<link rel="stylesheet" href="styles.css">
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<main class="page-shell">
+			<header class="site-header">
+				<h1>Assignment 5</h1>
+				<h2>Introduction to JavaScript</h2>
+			</header>
+
+			<section class="interaction-grid" aria-label="JavaScript activities">
+				<article class="activity-panel speech-panel" id="speech-panel">
+					<h3>Speech</h3>
+					<div class="speech-bubble" id="speech-bubble" aria-live="polite">Hi</div>
+				</article>
+
+				<article class="activity-panel beverage-panel">
+					<h3>Beverage</h3>
+					<label for="beverage-select">Pick your morning beverage:</label>
+					<select id="beverage-select">
+						<option value="Coffee">Coffee</option>
+						<option value="Tea">Tea</option>
+						<option value="Orange Juice">Orange Juice</option>
+						<option value="Water">Water</option>
+					</select>
+					<p class="beverage-result" id="beverage-result" aria-live="polite"></p>
+				</article>
+
+				<article class="activity-panel sticker-panel">
+					<h3>Add a Sticker</h3>
+					<button class="sun-button" id="sun-button" type="button" aria-label="Add a sun sticker">
+						<span class="sun-emoji" role="img" aria-label="smiling sun">&#x1F31E;</span>
+					</button>
+					<span class="sticker" id="sticker" role="img" aria-label="small sun sticker">&#x1F31E;</span>
+				</article>
+			</section>
+
+			<footer>@ Alto Stephens</footer>
+		</main>
+	</body>
+</html>

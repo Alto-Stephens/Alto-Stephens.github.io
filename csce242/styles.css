@@ -64,6 +64,9 @@ main{
     font-weight: 600;
     color:#7a2424;
 }
+.card-title-link{
+    color:inherit;
+}
 .portfolio-card img{
     display:block;
     width:300px;
