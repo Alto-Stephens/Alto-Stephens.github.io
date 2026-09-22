@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>JavaScript Conditionals</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="page-shell">
+			<header class="site-header">
+				<h1>Assignment 6</h1>
+				<h2>JavaScript Conditionals</h2>
+
+				<button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">
+					<span class="arrow" aria-hidden="true">&#9662;</span>
+					<span>Exercises</span>
+				</button>
+
+				<nav class="main-nav" id="main-nav" aria-label="Assignment exercises">
+					<a href="#exercise-1">Exercise 1</a>
+					<a href="#exercise-2">Exercise 2</a>
+				</nav>
+			</header>
+
+			<main>
+				<section class="exercise-panel" id="exercise-1" aria-labelledby="exercise-1-title">
+					<h3 id="exercise-1-title">Missing Class Point Deductions</h3>
+					<label for="missed-days">How many days do you intend to miss class?</label>
+					<input id="missed-days" type="number" min="0" max="25" step="1" />
+					<p class="result" id="attendance-result" aria-live="polite"></p>
+				</section>
+
+				<section class="exercise-panel hidden" id="exercise-2" aria-labelledby="exercise-2-title">
+					<h3 id="exercise-2-title">End of Semester Counter</h3>
+					<p id="semester-result" aria-live="polite"></p>
+					<p id="semester-message" aria-live="polite"></p>
+				</section>
+			</main>
+
+			<footer>
+				<p>@altostephens</p>
+			</footer>
+		</div>
+		<script src="index.js"></script>
+	</body>
+</html>

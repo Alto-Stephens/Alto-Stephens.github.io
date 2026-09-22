@@ -106,3 +106,56 @@ document.getElementById("btn-donation").onclick =()=>{
 
     donationP.innerHTML = `You are ${percent.toFixed(1)}% to your goal`;
 }
+
+/*loops*/
+document.getElementById("loop-btn").onclick =()=>{
+    const loopTxt = document.getElementById("loop-msg");
+    for(i = 1;i<=10;i++){
+        let p = document.createElement("p")
+        p.innerHTML = i
+        loopTxt.append(p);
+    }
+}
+
+/*loops with range*/
+document.getElementById("btn-range").onclick=()=>{
+    const startText= document.getElementById("start-txt").value;
+    const endText = document.getElementById("end-txt").value;
+    const errorStart = document.getElementById("error-start");
+    errorStart.classList.add("hidden");
+    const errorEnd = document.getElementById("error-end");
+    errorEnd.classList.add("hidden");
+    const ul = document.getElementById("range-list");
+
+
+    if(isNaN(startText) || startText < 0 || startText>5){
+        errorStart.innerHTML = "Invalid";
+        errorStart.classList.remove("hidden");
+        return;
+    }
+    if(isNaN(endText) || endText < 0 || endText>5 || endText < startText){
+        errorEnd.innerHTML = "Invalid"
+        errorEnd.classList.remove("hidden");
+        return;   
+    }
+
+    for(let i = parseInt(startText); i < parseInt(endText); i++){
+        const li = document.createElement("li");
+        li.innerHTML = i;
+        ul.appendChild(li);
+    }
+}
+
+/*loops*/
+document.getElementById("show-toys").onclick = ()=>{
+    const toys = ["doll","skate board","action figure","xbox","roller skates","trampoline" ]
+    const toyList = document.getElementById("toy-list");
+    toyList.innerHTML = "";
+
+    for(let i = onabort; i < toys.length; i++){
+        const p = document.createElement("p");
+        p.innerHTML = toys[i];
+        toyList.append(p);
+
+    }
+}

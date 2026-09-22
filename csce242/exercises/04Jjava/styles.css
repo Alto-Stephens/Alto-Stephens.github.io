@@ -218,6 +218,11 @@ button{
     border:blue 2px solid;
 }
 
+/*error*/
+.error{
+    color:red;
+    font-style:italic;
+}
 /* 600 px or larger */
 @media (min-width: 1000px) {
     /* Structure */

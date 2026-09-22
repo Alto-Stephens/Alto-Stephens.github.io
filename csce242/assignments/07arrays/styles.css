@@ -1,0 +1,115 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --grass: #7acb5b;
+  --road: #2d2d2d;
+  --line: #f4d43a;
+  --rim: #4b4b4b;
+}
+
+body {
+  margin: 0;
+  background: var(--grass);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.scene {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--grass);
+}
+
+.road {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  background: var(--road);
+  overflow: hidden;
+  border-top: 4px solid #d6d6d6;
+  border-bottom: 4px solid #d6d6d6;
+}
+
+.road::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 12px;
+  transform: translateY(-50%);
+  background: repeating-linear-gradient(
+    to right,
+    transparent 0,
+    transparent 30px,
+    var(--line) 30px,
+    var(--line) 70px,
+    transparent 70px,
+    transparent 100px
+  );
+}
+
+.car {
+  position: absolute;
+  height: 52px;
+  border-radius: 10px 10px 8px 8px;
+  background: var(--car-color);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.car::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  top: -12px;
+  height: 15px;
+  border-radius: 10px 10px 0 0;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.car::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  top: 2px;
+  height: 12px;
+  border-radius: 7px 7px 0 0;
+  background: rgba(153, 208, 232, 0.75);
+}
+
+.car-window {
+  position: absolute;
+  left: 25%;
+  top: -4px;
+  width: 50%;
+  height: 18px;
+  background: rgba(214, 233, 244, 0.85);
+  border-radius: 8px 8px 3px 3px;
+}
+
+.wheel {
+  position: absolute;
+  bottom: -12px;
+  width: 18px;
+  height: 18px;
+  background: var(--rim);
+  border-radius: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.wheel-left {
+  left: 16px;
+}
+
+.wheel-right {
+  right: 16px;
+}
+
+@media (max-width: 800px) {
+  .road {
+    height: 180px;
+  }
+}
