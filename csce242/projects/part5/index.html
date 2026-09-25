@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Midnight Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="main-header">
+        <a class="brand-wrap" href="index.html" aria-label="Midnight Arcade home">
+          <span class="brand-logo">MIDNIGHT ARCADE</span>
+        </a>
+
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Open navigation">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+          <a class="is-active" href="index.html">HOME</a>
+          <a href="games.html">GAMES</a>
+          <a href="gallery.html">ARCADE GALLERY</a>
+          <a href="history.html">HISTORY</a>
+          <a href="soundtracks.html">SOUNDTRACKS</a>
+        </nav>
+      </header>
+
+      <main class="content">
+        <section class="hero" aria-label="Arcade hero section">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <p class="coin-text">INSERT COIN TO CONTINUE</p>
+            <h1>
+              <span class="line-one">MIDNIGHT</span>
+              <span class="line-two">ARCADE</span>
+            </h1>
+          </div>
+        </section>
+
+        <p class="intro-text">
+          Journey back to the golden age of gaming.<br />
+          Explore the classics, the history, and the culture<br />
+          that shaped an entire generation.
+        </p>
+
+        <div class="tag-row" aria-label="Game categories">
+          <span>•</span>
+          <a href="#">PAC-MAN</a>
+          <span>•</span>
+          <a href="#">SPACE INVADERS</a>
+          <span>•</span>
+          <a href="#">DONKEY KONG</a>
+          <span>•</span>
+          <a href="#">GALAXIAN</a>
+          <span>•</span>
+          <a href="#">TETRIS</a>
+        </div>
+
+        <section class="stats" aria-label="Arcade statistics">
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">CLASSIC GAMES</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">YEARS OF HISTORY</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">300+</div>
+            <div class="stat-label">GALLERY ITEMS</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">80+</div>
+            <div class="stat-label">SOUNDTRACKS</div>
+          </div>
+        </section>
+
+        <section class="featured">
+          <h2>FEATURED CLASSICS</h2>
+
+          <div class="card-grid">
+            <article class="game-card pacman">
+              <div class="game-header">
+                <h3>PAC-MAN</h3>
+                <span>RELEASED: 1980</span>
+              </div>
+              <p>
+                The most iconic arcade game ever created. Guide Pac-Man through
+                a maze of dots while dodging hordes of ghosts.
+              </p>
+              <button>INSERT COIN</button>
+            </article>
+
+            <article class="game-card invaders">
+              <div class="game-header">
+                <h3>SPACE INVADERS</h3>
+                <span>RELEASED: 1978</span>
+              </div>
+              <p>
+                The game that launched the golden age of arcade gaming. Defend
+                Earth from relentless alien formations.
+              </p>
+              <button>INSERT COIN</button>
+            </article>
+            <article class="game-card donkey">
+              <div class="game-header">
+                <h3>DONKEY KONG</h3>
+                <span>RELEASE: 1981</span>
+              </div>
+              <p>
+                Mario's debut. Climb ladders, dodge barrels, and rescue Pauline
+                from the towering ape.
+              </p>
+              <button>INSERT COIN</button>
+            </article>
+          </div>
+        </section>
+
+        <section class="feature-banner" id="arcade" aria-label="Arcade gallery banner">
+            <img id="carpet-img" src="images/arcade carpet.jpg" alt="arcade carpet banner">
+        </section>
+      </main>
+
+      <footer class="main-footer">
+        <div class="footer-brand">MIDNIGHT ARCADE</div>
+        <div class="footer-meta">ALTO STEPHENS 2026</div>
+      </footer>
+    </div>
+    <script src="nav.js"></script>
+  </body>
+</html>

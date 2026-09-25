@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games Catalog | Midnight Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="main-header">
+        <a class="brand-wrap" href="index.html" aria-label="Midnight Arcade home"><span class="brand-logo">MIDNIGHT ARCADE</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+          <a href="index.html">HOME</a><a class="is-active" href="games.html">GAMES</a><a href="gallery.html">ARCADE GALLERY</a><a href="history.html">HISTORY</a><a href="soundtracks.html">SOUNDTRACKS</a>
+        </nav>
+      </header>
+      <main>
+        <header class="page-heading"><p class="eyebrow">MIDNIGHT ARCADE</p><h1>GAMES CATALOG</h1><p>Classic arcade games from the golden age, 1978 to 1992</p></header>
+        <section class="subpage-content" aria-label="Classic game catalog">
+          <div class="section-bar"><h2>12 GAMES FOUND</h2><span class="section-count">01 / 12</span></div>
+          <nav class="filters" aria-label="Game categories"><a class="filter-link is-active" href="#all-games">ALL</a><a class="filter-link" href="#all-games">SHOOTER</a><a class="filter-link" href="#all-games">PLATFORMER</a><a class="filter-link" href="#all-games">MAZE</a><a class="filter-link" href="#all-games">FIGHTING</a><a class="filter-link" href="#all-games">RACING</a><a class="filter-link" href="#all-games">PUZZLE</a></nav>
+          <div class="catalog-grid" id="all-games">
+            <article class="catalog-card"><a href="game-preview.html" aria-label="Preview Pac-Man"><img src="images/pacman.jpg" alt="Pac-Man arcade game screen" /></a><div class="catalog-card-body"><h3>PAC-MAN</h3><p>Navigate a maze eating pellets while fleeing four ghosts. A timeless maze-chase classic.</p><div class="card-meta"><span>MAZE</span><span>1980</span></div><a class="text-link" href="game-preview.html">READ MORE +</a></div></article>
+            <article class="catalog-card"><img src="images/invaders.jpg" alt="Space Invaders cabinet" /><div class="catalog-card-body"><h3>SPACE INVADERS</h3><p>Defend Earth against waves of descending alien invaders in the game that launched a genre.</p><div class="card-meta"><span>SHOOTER</span><span>1978</span></div></div></article>
+            <article class="catalog-card"><img src="images/dk.jpg" alt="Donkey Kong arcade machine" /><div class="catalog-card-body"><h3>DONKEY KONG</h3><p>Climb the construction site, dodge barrels, and rescue Pauline from the towering ape.</p><div class="card-meta"><span>PLATFORMER</span><span>1981</span></div></div></article>
+            <article class="catalog-card"><img src="images/galaga.jpg" alt="Colorful arcade floor and machines" /><div class="catalog-card-body"><h3>GALAGA</h3><p>Take command of a starfighter and stop the relentless insect-like alien fleet.</p><div class="card-meta"><span>SHOOTER</span><span>1981</span></div></div></article>
+            <article class="catalog-card"><img src="images/streetfighterII.jpg" alt="Classic arcade game screen" /><div class="catalog-card-body"><h3>STREET FIGHTER II</h3><p>Choose a world warrior and compete in a landmark head-to-head fighting game.</p><div class="card-meta"><span>FIGHTING</span><span>1991</span></div></div></article>
+            <article class="catalog-card"><img src="images/outrun.jpg" alt="Retro arcade game display" /><div class="catalog-card-body"><h3>OUT RUN</h3><p>Race along a branching coastal highway in a defining arcade driving experience.</p><div class="card-meta"><span>RACING</span><span>1986</span></div></div></article>
+            
+          </div>
+        </section>
+      </main>
+      <footer class="main-footer"><div class="footer-brand">MIDNIGHT ARCADE</div><div class="footer-meta"></div><div class="footer-meta">INSERT COIN 2026</div></footer>
+    </div>
+    <script src="nav.js"></script>
+  </body>
+</html>
