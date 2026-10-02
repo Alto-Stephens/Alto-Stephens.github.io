@@ -58,22 +58,38 @@
           <a href="#">TETRIS</a>
         </div>
 
-        <section class="stats" aria-label="Arcade statistics">
-          <div class="stat-card">
-            <div class="stat-number">200+</div>
-            <div class="stat-label">CLASSIC GAMES</div>
+        <section class="arcade-gallery" aria-label="Featured arcade games">
+          <div class="section-bar">
+            <h2>GAMES TO DISCOVER</h2>
+            <span class="section-count" data-slide-count aria-live="polite">01 / 05</span>
           </div>
-          <div class="stat-card">
-            <div class="stat-number">50+</div>
-            <div class="stat-label">YEARS OF HISTORY</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">300+</div>
-            <div class="stat-label">GALLERY ITEMS</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number">80+</div>
-            <div class="stat-label">SOUNDTRACKS</div>
+          <div class="slideshow" data-slideshow aria-roledescription="carousel" aria-label="Featured arcade games">
+            <div class="slideshow-stage">
+              <a class="gallery-slide" href="games.html" aria-label="Pac-Man, released 1980">
+                <img src="images/pacman.jpg" alt="Pac-Man arcade game" />
+                <span class="gallery-caption"><strong>Pac-Man</strong><small>1980</small></span>
+              </a>
+              <a class="gallery-slide" href="games.html" aria-label="Space Invaders, released 1978" hidden>
+                <img src="images/invaders.jpg" alt="Space Invaders arcade game" />
+                <span class="gallery-caption"><strong>Space Invaders</strong><small>1978</small></span>
+              </a>
+              <a class="gallery-slide" href="games.html" aria-label="Donkey Kong, released 1981" hidden>
+                <img src="images/dk.jpg" alt="Donkey Kong arcade game" />
+                <span class="gallery-caption"><strong>Donkey Kong</strong><small>1981</small></span>
+              </a>
+              <a class="gallery-slide" href="games.html" aria-label="Galaga, released 1981" hidden>
+                <img src="images/galaga.jpg" alt="Galaga arcade game" />
+                <span class="gallery-caption"><strong>Galaga</strong><small>1981</small></span>
+              </a>
+              <a class="gallery-slide" href="games.html" aria-label="Out Run, released 1986" hidden>
+                <img src="images/outrun.jpg" alt="Out Run arcade game" />
+                <span class="gallery-caption"><strong>Out Run</strong><small>1986</small></span>
+              </a>
+            </div>
+            <div class="slideshow-controls">
+              <button class="slideshow-button" type="button" data-slide-previous aria-label="Previous game">PREVIOUS</button>
+              <button class="slideshow-button" type="button" data-slide-next aria-label="Next game">NEXT</button>
+            </div>
           </div>
         </section>
 

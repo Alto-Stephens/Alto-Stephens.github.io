@@ -81,7 +81,7 @@ a {
   font-family: "Press Start 2P", monospace;
   letter-spacing: 0.08em;
   color: #ff4ec4;
-  font-size: 8px;
+  font-size: 12px;
   line-height: 1.6;
   text-transform: uppercase;
   text-shadow: 0 0 10px rgba(255, 79, 196, 0.65);
@@ -234,47 +234,97 @@ a {
   color: var(--blue);
 }
 
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(130px, 1fr));
-  gap: 0;
+.arcade-gallery {
   margin: 0 22px 24px;
-  border: 1px solid rgba(255, 110, 220, 0.24);
-  border-radius: 0;
+}
+
+.slideshow {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.slideshow-stage {
   overflow: hidden;
-  background: rgba(18, 8, 26, 0.82);
+  border: 1px solid rgba(255, 110, 220, 0.24);
+  background: var(--bg-deep);
 }
 
-.stat-card {
-  min-height: 130px;
-  padding: 24px 20px 18px;
+.gallery-slide {
+  display: grid;
+  color: var(--text);
+  text-decoration: none;
+  animation: slide-arrive 0.25s ease both;
+}
+
+.gallery-slide[hidden] {
+  display: none;
+}
+
+.gallery-slide img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  max-height: 430px;
+  object-fit: cover;
+}
+
+.gallery-caption {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-right: 1px solid rgba(255, 130, 240, 0.18);
-  background: linear-gradient(180deg, rgba(35, 17, 51, 0.7), rgba(17, 11, 25, 0.9));
-}
-
-.stat-card:last-child {
-  border-right: none;
-}
-
-.stat-number {
-  font-family: "Press Start 2P", monospace;
-  font-size: clamp(18px, 2vw, 32px);
-  color: var(--blue);
-  text-shadow: 0 0 8px rgba(95, 231, 255, 0.7);
-  margin-bottom: 10px;
-}
-
-.stat-label {
+  gap: 12px;
+  padding: 14px 16px;
   font-family: "Orbitron", sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  color: rgba(255, 240, 255, 0.85);
-  text-transform: uppercase;
+}
+
+.gallery-caption strong {
+  color: var(--pink);
+  font-size: 12px;
+}
+
+.gallery-caption small {
+  color: var(--blue);
+  font-size: 11px;
+}
+
+.slideshow-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.slideshow-button {
+  min-height: 38px;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  background: var(--bg-deep);
+  color: var(--text);
+  font: 8px "Press Start 2P", monospace;
+  cursor: pointer;
+}
+
+.slideshow-button:hover {
+  border-color: var(--blue);
+  color: var(--blue);
+}
+
+.slideshow-button:focus-visible,
+.gallery-slide:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 3px;
+}
+
+@keyframes slide-arrive {
+  from { opacity: 0.55; }
+  to { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-slide {
+    animation: none;
+  }
+
 }
 
 .featured {
@@ -478,10 +528,6 @@ a {
     height: 430px;
   }
 
-  .stats {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .card-grid {
     grid-template-columns: 1fr;
   }
@@ -644,7 +690,9 @@ a {
 
 .feature-gallery-item {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+  grid-template-columns: minmax(0, 1fr);
+  max-width: 760px;
+  margin: 0 auto;
   border: 1px solid rgba(198, 75, 255, 0.25);
   background: var(--bg-deep);
 }
@@ -656,14 +704,20 @@ a {
 
 .feature-gallery-item img {
   width: 100%;
-  height: 100%;
-  min-height: 290px;
-  object-fit: cover;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  background: #050509;
 }
 
 .feature-gallery-copy {
   align-self: center;
   padding: 22px;
+  text-align: center;
+}
+
+.feature-gallery-copy .card-meta {
+  justify-content: center;
 }
 
 .feature-gallery-copy h2 {
@@ -756,8 +810,8 @@ a {
 .track-note,
 .track-duration {
   color: var(--muted);
-  font-size: 10px;
-  line-height: 1.5;
+  font-size: 13px;
+  line-height: 1.6;
 }
 
 .track-genre {
@@ -803,13 +857,34 @@ a {
   }
 
   .track-row {
-    grid-template-columns: 38px minmax(0, 1fr) auto;
+    grid-template-columns: 38px minmax(0, 1fr) auto 46px;
+    grid-template-areas:
+      "play name genre duration"
+      ". note note note";
   }
 
-  .track-note,
-  .track-duration {
-    display: none;
+  .track-play {
+    grid-area: play;
   }
+
+  .track-name {
+    grid-area: name;
+  }
+
+  .track-note {
+    display: block;
+    grid-area: note;
+    margin: 0;
+  }
+
+  .track-genre {
+    grid-area: genre;
+  }
+
+  .track-duration {
+    grid-area: duration;
+  }
+
 }
 
 @media (max-width: 540px) {
