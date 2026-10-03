@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+	<head>
+		<title>Assignment 9</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="index.js" defer></script>
+	</head>
+	<body>
+		<main class="assignment-page">
+			<header class="page-heading">
+				<p class="eyebrow">A Carolina getaway guide</p>
+				<h1>Vacations</h1>
+				<h2>Vacation Experiences</h2>
+			</header>
+
+			<section id="vacation-gallery" class="vacation-gallery" aria-label="Vacation destinations"></section>
+		</main>
+
+		<dialog id="vacation-dialog" class="vacation-dialog" aria-labelledby="dialog-title">
+			<button class="dialog-close" type="button" aria-label="Close vacation details">&times;</button>
+			<div class="dialog-content">
+				<div class="dialog-map-wrap">
+					<iframe id="dialog-map" title="Map of vacation destination" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+				<section class="dialog-details">
+					<p id="dialog-type" class="dialog-type"></p>
+					<h2 id="dialog-title"></h2>
+					<p id="dialog-description"></p>
+					<h3>Things to do</h3>
+					<p id="dialog-activities"></p>
+				</section>
+			</div>
+		</dialog>
+
+		<footer>@altostephens</footer>
+	</body>
+</html>
