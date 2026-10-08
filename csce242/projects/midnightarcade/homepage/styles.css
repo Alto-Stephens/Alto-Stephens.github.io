@@ -307,7 +307,7 @@ a {
 
 .game-card.pacman {
   background-image: linear-gradient(180deg, rgba(40, 16, 46, 0.7), rgba(10, 7, 21, 0.95)),
-  url("images/pacman.jpg")
+  url("images/pacman.jpg");
   background-size: cover;
   background-position: center;
 }
