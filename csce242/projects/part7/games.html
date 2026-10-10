@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Games Catalog | Midnight Arcade</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@500;700;800;900&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="main-header">
+        <a class="brand-wrap" href="index.html" aria-label="Midnight Arcade home"><span class="brand-logo">MIDNIGHT ARCADE</span></a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-navigation" aria-label="Open navigation"><span></span><span></span><span></span></button>
+        <nav class="main-nav" id="main-navigation" aria-label="Main navigation">
+          <a href="index.html">HOME</a><a class="is-active" href="games.html">GAMES</a><a href="gallery.html">ARCADE GALLERY</a><a href="history.html">HISTORY</a><a href="soundtracks.html">SOUNDTRACKS</a>
+        </nav>
+      </header>
+      <main>
+        <header class="page-heading">
+          <p class="eyebrow">MIDNIGHT ARCADE</p>
+          <h1>GAMES CATALOG</h1>
+          <p>Classic arcade games from the golden age, 1978 to 1992</p>
+        </header>
+        <section class="subpage-content" aria-label="Classic game catalog">
+          <div class="section-bar">
+            <h2>CLASSIC GAMES</h2>
+            <span class="section-count" id="game-count" aria-live="polite">Loading...</span>
+          </div>
+          <nav class="filters" aria-label="Filter games by category">
+            <button class="filter-link is-active" type="button" data-category="ALL" aria-pressed="true">ALL</button>
+            <button class="filter-link" type="button" data-category="MAZE" aria-pressed="false">MAZE</button>
+            <button class="filter-link" type="button" data-category="SHOOTER" aria-pressed="false">SHOOTER</button>
+            <button class="filter-link" type="button" data-category="PLATFORMER" aria-pressed="false">PLATFORMER</button>
+            <button class="filter-link" type="button" data-category="FIGHTING" aria-pressed="false">FIGHTING</button>
+            <button class="filter-link" type="button" data-category="RACING" aria-pressed="false">RACING</button>
+          </nav>
+          <p class="catalog-status" id="catalog-status" role="status" aria-live="polite">Loading the game catalog...</p>
+          <div class="catalog-grid" id="all-games"></div>
+          <p class="json-source">JSON data: <a href="https://alto-stephens.github.io/csce242/projects/part7/games.json">games.json</a></p>
+        </section>
+      </main>
+      <footer class="main-footer">
+        <div class="footer-brand">MIDNIGHT ARCADE</div>
+        <div class="footer-meta">ALTO STEPHENS 2026</div>
+      </footer>
+    </div>
+    <script src="nav.js"></script>
+    <script src="games.js"></script>
+  </body>
+</html>
