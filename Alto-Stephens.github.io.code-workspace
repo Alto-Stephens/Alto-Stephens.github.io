@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Alto-Stephens.github.io",
+			"path": "."
+		},
+		{
+			"name": "midnightarcade_backend",
+			"path": "../../../midnightarcade_backend/midnightarcade_backend"
+		}
+	],
+	"settings": {}
+}
