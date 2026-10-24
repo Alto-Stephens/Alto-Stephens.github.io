@@ -1,0 +1,7 @@
+.timeline-era:last-child {
+  border-bottom: 0;
+}
+
+.timeline-event .timeline-intro {
+  margin: 5px 0 0;
+}
