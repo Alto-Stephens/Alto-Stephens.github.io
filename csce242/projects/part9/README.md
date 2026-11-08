@@ -6,6 +6,10 @@ Shared layout, catalog cards, timeline events, and soundtrack rows live in
 `src/components`; page content and page-specific styles live in `src/pages`.
 The image components reuse the original Part 7 pictures.
 
+The games catalog loads its game list from
+`https://midnightarcade-backend.onrender.com/api/games`. The server repository
+provides a themed API landing page at its root and serves the catalog as JSON.
+
 From the repository root, install dependencies and start the development server:
 
 ```sh
